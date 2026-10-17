@@ -34,7 +34,8 @@ export const intercambios = [
         idiomaOfrecido: "Español",
         idiomaBuscado: "Inglés",
         modalidad: "Presencial",
-        descripcion: "Quiero practicar a hablar en inglés."
+        descripcion: "Quiero practicar a hablar en inglés.",
+        fechaCreacion: "2026-10-10"
     },
     {
         id: 2,
@@ -43,7 +44,8 @@ export const intercambios = [
         idiomaOfrecido: "Inglés",
         idiomaBuscado: "Francés",
         modalidad: "Online",
-        descripcion: "Busco practicar francés con otra persona."
+        descripcion: "Busco practicar francés con otra persona.",
+        fechaCreacion: "2026-10-14"
     },
     {
         id: 3,
@@ -52,6 +54,7 @@ export const intercambios = [
         idiomaOfrecido: "Francés",
         idiomaBuscado: "Español",
         modalidad: "Online",
-        descripcion: "Puedo ayudar con francés a cambio de español."
+        descripcion: "Puedo ayudar con francés a cambio de español.",
+        fechaCreacion: "2026-10-17"
     }
 ];

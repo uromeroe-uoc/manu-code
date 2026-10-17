@@ -6,18 +6,29 @@ const contenedor = document.getElementById("contenedorIntercambios");
 // Buscamos el selector de tipo de intercambio.
 const filtroTipo = document.getElementById("filtroTipo");
 
+// Buscamos el selector para ordenar por fecha.
+const ordenFecha = document.getElementById("ordenFecha");
+
 // Función para mostrar todos los intercambios.
 function mostrarIntercambios() {
     // Limpiamos el contenedor antes de mostrar los datos.
     contenedor.innerHTML = "";
 
     // Filtramos los intercambios según la opción seleccionada.
-    intercambios
-        .filter(function (intercambio) {
-            return filtroTipo.value === "todos" ||
-                   intercambio.tipo === filtroTipo.value;
-        })
-        .forEach(function (intercambio) {
+   intercambios
+    .filter(function (intercambio) {
+        return filtroTipo.value === "todos" ||
+               intercambio.tipo === filtroTipo.value;
+    })
+    .slice()
+    .sort(function (a, b) {
+        if (ordenFecha.value === "recientes") {
+            return b.fechaCreacion.localeCompare(a.fechaCreacion);
+        }
+
+        return a.fechaCreacion.localeCompare(b.fechaCreacion);
+    })
+    .forEach(function (intercambio) {
 
         // Buscamos al usuario que ha publicado el intercambio.
         const usuario = usuarios.find(function (u) {
@@ -55,6 +66,11 @@ function mostrarIntercambios() {
                         ${intercambio.modalidad}
                     </p>
 
+                    <p class="small mb-2">
+                        <strong>Fecha de publicación:</strong>
+                        ${new Date(intercambio.fechaCreacion + "T00:00:00").toLocaleDateString("es-ES")}
+                    </p>
+
                     <p class="small mb-0">
                         <strong>Usuario:</strong>
                         ${usuario ? usuario.nombre : "Usuario desconocido"}
@@ -73,3 +89,6 @@ mostrarIntercambios();
 
 // Actualizamos las tarjetas cuando cambia el filtro.
 filtroTipo.addEventListener("change", mostrarIntercambios);
+
+// Actualizamos las tarjetas cuando cambia el orden por fecha.
+ordenFecha.addEventListener("change", mostrarIntercambios);
