@@ -1,3 +1,4 @@
+// Importamos los datos de usuarios e intercambios.
 import { usuarios, intercambios } from "./datos.js";
 
 // Buscamos el contenedor donde aparecerán las tarjetas.

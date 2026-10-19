@@ -1,3 +1,4 @@
+
 const menuPrincipal = document.querySelector("#menuPrincipal .navbar-nav");
 
 export function actualizarNavegacion() { // Comprobamos que exista el menú. if (!menuPrincipal) { return; }
