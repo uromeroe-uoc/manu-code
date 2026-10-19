@@ -1,0 +1,69 @@
+/* ==========================================================================
+   HOJA DE ESTILOS PERSONALIZADA - TandemLink (estilos.css)
+   Este archivo complementa a Bootstrap 5 añadiendo la identidad visual,
+   tipografías corporativas, colores específicos y animaciones propias.
+   ========================================================================== */
+
+/* 1. IMPORTACIÓN DE TIPOGRAFÍA */
+/* Importamos la fuente 'Poppins' en sus distintos grosores desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* 2. CONFIGURACIÓN GENERAL DEL CUERPO (BODY) */
+body {
+    /* Aplicamos la tipografía Poppins a toda la página, usando sans-serif como alternativa */
+    font-family: 'Poppins', sans-serif;
+    
+    /* Color de fondo general de la web (un gris muy suave y limpio) */
+    background-color: #f8fafc; 
+    
+    /* Color de texto general para asegurar una buena legibilidad */
+    color: #263238;
+}
+
+
+/* 3. COLORES Y CLASES CORPORATIVAS EXACTAS (Diseño Figma) */
+
+/* Color de fondo personalizado para la barra de navegación superior (Header) */
+.bg-azul-tandem {
+    background-color: #3b82f6 !important; /* !important asegura que sobrescriba los estilos por defecto de Bootstrap */
+}
+
+/* Color azul marino oscuro específico para destacar el título principal ("Gestión de usuarios") */
+.texto-titulo {
+    color: #173b67;
+    font-weight: 700; /* Texto en negrita fuerte */
+}
+
+/* Color gris suave para los subtítulos y descripciones de las páginas */
+.texto-subtitulo {
+    color: #5f6b76;
+}
+
+/* Estilo personalizado para la cabecera (thead) de las tablas de datos */
+.cabecera-tabla-azul {
+    background-color: #dbeafe !important; /* Azul claro corporativo */
+    color: #1e3a8a;                      /* Texto azul oscuro para contraste */
+    font-weight: 600;                    /* Seminegrita para la cabecera */
+}
+
+
+/* 4. ANIMACIONES CSS (@keyframes) */
+
+/* Creamos una regla de animación para que los elementos aparezcan suavemente flotando hacia arriba */
+@keyframes aparecerSuave {
+    0% { 
+        opacity: 0;                   /* Totalmente transparente al inicio */
+        transform: translateY(15px);  /* Desplazado 15 píxeles hacia abajo */
+    }
+    100% { 
+        opacity: 1;                   /* Totalmente visible */
+        transform: translateY(0);     /* Vuelve a su posición original */
+    }
+}
+
+/* Clase de utilidad que aplicaremos en el HTML para activar la animación */
+.animacion-entrada {
+    /* Llama a la animación 'aparecerSuave' con una duración de 0.6 segundos, 
+       curva ease-out (frenado suave al final) y mantiene el estado final (forwards) */
+    animation: aparecerSuave 0.6s ease-out forwards;
+}

@@ -1,10 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
-  </head>
+<head>
+    <!-- Configuración de la codificación de caracteres a UTF-8 para admitir tildes y eñes -->
+    <meta charset="UTF-8">
+    
+    <!-- Adaptabilidad responsive para dispositivos móviles y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título principal de la página de bienvenida -->
+    <title>Inicio - TandemLink</title>
+    
+    <!-- Importación del framework CSS Bootstrap 5 mediante CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Hoja de estilos propia (tipografía Poppins, colores corporativos y animaciones) -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
 
-  <body></body>
+    <!-- ========================================== -->
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL              -->
+    <!-- ========================================== -->
+    <!-- navbar-expand-lg: despliega el menú en pantallas grandes; bg-azul-tandem: color corporativo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-tandem mb-4 py-3">
+        <div class="container">
+            <!-- Logotipo o marca de la plataforma, enlazado al propio inicio -->
+            <a class="navbar-brand fw-bold" href="index.html">TandemLink</a>
+            
+            <!-- Botón de hamburguesa para pantallas pequeñas (móviles) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Contenedor colapsable del menú de navegación -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <!-- Añadimos 'active fw-bold' en Inicio para indicar visualmente en qué página estamos -->
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="intercambios.html">Intercambios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="usuarios.html">Usuarios</a></li>
+                    
+                    <!-- ID CLAVE: Aquí el script 'navegacion.js' inyectará dinámicamente el nombre del usuario conectado -->
+                    <li class="nav-item ms-lg-3" id="infoUsuarioNav"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR PRINCIPAL: SECCIÓN HERO         -->
+    <!-- ========================================== -->
+    <!-- container: centra el contenido; animacion-entrada: clase propia para la transición suave -->
+    <div class="container animacion-entrada py-5">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-8">
+                
+                <!-- Título principal llamativo -->
+                <h1 class="texto-titulo display-4 fw-bold mb-3">Conecta, comparte y aprende idiomas con TandemLink</h1>
+                
+                <!-- Párrafo descriptivo de la plataforma -->
+                <p class="texto-subtitulo fs-5 mb-5">
+                    La comunidad ideal para encontrar compañeros de intercambio lingüístico. 
+                    Ofrece tus conocimientos en tu idioma nativo y practica las lenguas que siempre quisiste dominar, 
+                    tanto de forma presencial como online.
+                </p>
+
+                <!-- Botones de acción rápida (Call to Action) -->
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="intercambios.html" class="btn btn-primary bg-azul-tandem border-0 px-4 py-3 fw-semibold shadow-sm">
+                        Ver intercambios
+                    </a>
+                    <a href="usuarios.html" class="btn btn-outline-secondary px-4 py-3 fw-semibold shadow-sm">
+                        Gestionar usuarios
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE CARACTERÍSTICAS / TARJETAS INFORMATIVAS -->
+        <div class="row mt-5 pt-4 g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-primary mb-3">Intercambio real</h5>
+                        <p class="card-text texto-subtitulo">
+                            Conecta con personas nativas dispuestas a practicar contigo mediante un sistema de ayuda mutua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-primary mb-3">Flexible y modular</h5>
+                        <p class="card-text texto-subtitulo">
+                            Elige entre modalidades presenciales u online adaptadas a tus horarios y necesidades de aprendizaje.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-primary mb-3"> Sesiones seguras</h5>
+                        <p class="card-text texto-subtitulo">
+                            Gestiona tu cuenta y mantén el control de tu sesión activa de forma sencilla en todo momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fin del contenedor principal -->
+
+
+    <!-- ========================================== -->
+    <!-- SCRIPTS DE JAVASCRIPT                      -->
+    <!-- ========================================== -->
+    
+    <!-- 1. Bootstrap Bundle: componentes interactivos y menú desplegable -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 2. Importante: enlazamos también el script de navegación para que cargue el nombre si hay sesión activa -->
+    <script type="module" src="js/navegacion.js"></script>
+</body>
 </html>
