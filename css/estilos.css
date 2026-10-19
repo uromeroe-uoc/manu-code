@@ -1,9 +1,13 @@
+/* Importación de Google Fonts (Arimo) */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* Estilos generales de TandemLink */
 
 body {
     background-color: #f8f9fc;
     color: #263238;
-    font-family: Arial, Helvetica, sans-serif;
+/* Usamos la web font importada como principal */
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
 }
 
 header {
