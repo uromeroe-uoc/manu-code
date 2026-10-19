@@ -1,5 +1,6 @@
-
+// Importamos los datos de usuarios y la función para actualizar la navegación.
 import { usuarios } from "./datos.js";
+import { actualizarNavegacion } from "./navegacion.js";
 
 // Buscamos el formulario y sus elementos.
 const formulario = document.getElementById("formularioLogin");
@@ -22,13 +23,25 @@ formulario.addEventListener("submit", function (evento) {
                usuario.password === password;
     });
 
-    // Comprobamos si las credenciales son correctas.
+// Comprobamos si las credenciales son correctas.
     if (usuarioEncontrado) {
         mensaje.textContent = "¡Bienvenido/a, " + usuarioEncontrado.nombre + "!";
         mensaje.className = "alert alert-success mb-3";
 
-        console.log("Inicio de sesión correcto:", usuarioEncontrado.email);
+        // Guardamos los datos básicos del usuario conectado.
+        sessionStorage.setItem(
+            "usuarioConectado",
+            JSON.stringify({
+                id: usuarioEncontrado.id,
+                nombre: usuarioEncontrado.nombre,
+                email: usuarioEncontrado.email
+            })
+        );
+        actualizarNavegacion();
     } else {
+        // Eliminamos una posible sesión anterior.
+        sessionStorage.removeItem("usuarioConectado");
+
         mensaje.textContent = "Correo electrónico o contraseña incorrectos.";
         mensaje.className = "alert alert-danger mb-3";
     }

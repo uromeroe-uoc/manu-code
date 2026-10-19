@@ -1,5 +1,6 @@
-
+// Importamos los datos de usuarios y la función para actualizar la navegación.
 import { usuarios } from "./datos.js";
+import { actualizarNavegacion } from "./navegacion.js";
 
 // Elementos del formulario y de la tabla.
 const formulario = document.getElementById("formularioUsuario");
@@ -115,10 +116,30 @@ listaUsuarios.addEventListener("click", function (evento) {
         return;
     }
 
+    // Comprobamos si el usuario eliminado tiene la sesión activa.
+    const datosSesion = sessionStorage.getItem("usuarioConectado");
+
+    if (datosSesion) {
+        try {
+            const usuarioConectado = JSON.parse(datosSesion);
+
+            if (usuarioConectado.id === id) {
+                sessionStorage.removeItem("usuarioConectado");
+            }
+        } catch (error) {
+            // Si la sesión no es válida, la eliminamos.
+            sessionStorage.removeItem("usuarioConectado");
+        }
+    }
+
+    // Eliminamos al usuario del array.
     usuarios.splice(indice, 1);
 
     mostrarUsuarios();
     mostrarMensaje("Usuario eliminado correctamente.", "success");
+
+    // Actualizamos el menú después de la eliminación.
+    actualizarNavegacion();
 });
 
 // Cargamos los usuarios iniciales.
