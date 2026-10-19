@@ -1,3 +1,12 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Importa los módulos necesarios y captura las referencias del DOM para el formulario de login."
+   - Prompt 2: "Añade un event listener 'submit' para prevenir la recarga de la página y capturar las credenciales."
+   - Prompt 3: "Utiliza el método .find() para comprobar si existe un usuario con ese email y contraseña."
+   - Prompt 4: "Implementa la lógica para guardar la sesión en sessionStorage en caso de éxito o mostrar un error si falla."
+   ========================================================================== */
+
 // Importamos los datos de usuarios y la función para actualizar la navegación.
 import { usuarios } from "./datos.js";
 import { actualizarNavegacion } from "./navegacion.js";

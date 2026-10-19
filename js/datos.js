@@ -1,3 +1,14 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Crea un array exportable de usuarios con identificador, nombre, email y contraseña."
+   - Prompt 2: "Define un segundo array exportable de intercambios vinculado a los usuarios mediante un ID."
+   - Prompt 3: "Añade propiedades de tipo, idiomas ofrecidos y buscados en cada objeto de intercambio."
+   - Prompt 4: "Incluye datos de modalidad y fecha de creación con formato de texto estándar."
+   ========================================================================== */
+
+
+
 /*
     FICHERO DE DATOS COMPARTIDOS
     Proyecto: TandemLink

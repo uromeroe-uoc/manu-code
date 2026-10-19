@@ -1,3 +1,12 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Importa los arrays de datos y captura los elementos del DOM (contenedor y filtros)."
+   - Prompt 2: "Usa .filter() para mostrar solo las ofertas o peticiones seleccionadas."
+   - Prompt 3: "Aplica .sort() y .slice() para ordenar las tarjetas por fecha de forma cronológica."
+   - Prompt 4: "Añade eventos 'change' a los selectores para actualizar la vista de forma automática."
+   ========================================================================== */
+
 // Importamos los datos de usuarios e intercambios.
 import { usuarios, intercambios } from "./datos.js";
 

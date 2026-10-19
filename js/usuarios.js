@@ -1,3 +1,12 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Crea una función para renderizar dinámicamente los usuarios en una tabla HTML con botones de eliminación."
+   - Prompt 2: "Añade un event listener 'submit' para validar correos duplicados y registrar nuevos usuarios con un ID autoincremental."
+   - Prompt 3: "Implementa la lógica para eliminar un usuario de forma segura comprobando su índice en el array."
+   - Prompt 4: "Comprueba si el usuario eliminado tiene una sesión activa en sessionStorage para cerrarla y actualizar la navegación."
+   ========================================================================== */
+   
 // Importamos los datos de usuarios y la función para actualizar la navegación.
 import { usuarios } from "./datos.js";
 import { actualizarNavegacion } from "./navegacion.js";

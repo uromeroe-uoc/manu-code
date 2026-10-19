@@ -1,3 +1,14 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Crea una función para recorrer un array de usuarios y rellenar un elemento <select> con opciones."
+   - Prompt 2: "Genera un bucle para construir dinámicamente tarjetas HTML y asociarles un botón de eliminación."
+   - Prompt 3: "Añade la lógica de validación con .some() y cálculo de ID máximo para registrar un nuevo elemento vía formulario."
+   - Prompt 4: "Implementa el borrado seguro de un elemento de la lista usando delegación de eventos y un confirm nativo."
+   ========================================================================== */
+
+
+
 // Importamos los datos de usuarios e intercambios.
 import { usuarios, intercambios } from "./datos.js";
 

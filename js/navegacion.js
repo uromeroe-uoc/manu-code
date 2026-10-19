@@ -1,3 +1,13 @@
+/* ==========================================================================
+   DOCUMENTACIÓN IA GENERATIVA
+   - IA utilizada: Gemini
+   - Prompt 1: "Crea una función para limpiar los elementos dinámicos previos del menú de navegación."
+   - Prompt 2: "Comprueba si existe sesión en sessionStorage y parsea los datos para inyectar el correo del usuario."
+   - Prompt 3: "Añade un botón interactivo de cerrar sesión con un event listener para limpiar el almacenamiento."
+   - Prompt 4: "Implementa una función auxiliar para mostrar el enlace de inicio de sesión si no hay usuario autenticado."
+   ========================================================================== */
+
+
 
 const menuPrincipal = document.querySelector("#menuPrincipal .navbar-nav");
 
