@@ -25,7 +25,7 @@ function mostrarIntercambios() {
     contenedor.innerHTML = "";
 
     // Filtramos los intercambios según la opción seleccionada.
-   intercambios
+    intercambios
     .filter(function (intercambio) {
         return filtroTipo.value === "todos" ||
                intercambio.tipo === filtroTipo.value;

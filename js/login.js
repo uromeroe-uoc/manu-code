@@ -32,7 +32,7 @@ formulario.addEventListener("submit", function (evento) {
                usuario.password === password;
     });
 
-// Comprobamos si las credenciales son correctas.
+    // Comprobamos si las credenciales son correctas.
     if (usuarioEncontrado) {
         mensaje.textContent = "¡Bienvenido/a, " + usuarioEncontrado.nombre + "!";
         mensaje.className = "alert alert-success mb-3";
